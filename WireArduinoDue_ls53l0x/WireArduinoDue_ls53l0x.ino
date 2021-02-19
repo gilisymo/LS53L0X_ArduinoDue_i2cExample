@@ -38,7 +38,7 @@ int getRangingdata(uint8_t slaveaddress)
   b0 = Wire.read(); // contains the ranging MSB
   b1 = Wire.read(); // contains the ranging LSB
 
-  c  
+  result = b0*256 + b1;
 
   return result;
 }
@@ -75,6 +75,3 @@ int rangingValue;
 
   delay(100);
 }
-
-
-
